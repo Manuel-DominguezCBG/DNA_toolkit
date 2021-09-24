@@ -3,7 +3,14 @@
 Some code developed with my supervisor for learning proposes 
 
 
+## Tools:
 
+1. Length
+2. Reverse
+3. Complement
+4. Reverse and complement
+5. GC percentage
+6. Load data from .txt file
 
 ```
 .
