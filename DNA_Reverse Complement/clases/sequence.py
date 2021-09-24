@@ -3,7 +3,10 @@ DNA toolkit
 
 '''
 
-class Sequence:               # Use a class called Sequence
+class Sequence:  
+    '''
+    Basic tools to analysed DNA sequence
+    '''
     def __init__(self, DNA): 
         '''
         Stores original sequence
@@ -32,7 +35,7 @@ class Sequence:               # Use a class called Sequence
 
         # Check our seq againt this list
         if  set(sequence) <= valid_nucleotide:
-             return sequence
+            return sequence
         
         raise AssertionError('Invalid nucleotides.')
         # Return validated sequence
@@ -48,7 +51,7 @@ class Sequence:               # Use a class called Sequence
         Return the complement of a seq given
         '''
         complement_dict = {"A": "T", "T": "A","G":"C","C":"G"}
-        if seq == None:
+        if seq is None:
             seq = self.DNA
         complement_seq = []
         for k in  seq: 
@@ -59,7 +62,7 @@ class Sequence:               # Use a class called Sequence
         '''
         Reverse a given seq
         '''
-        if seq == None:
+        if seq is None:
             seq = self.DNA
         reverse_seq = seq[::-1]
         return reverse_seq
@@ -69,7 +72,7 @@ class Sequence:               # Use a class called Sequence
         Do the reverse first and the then the complement
         calling the function reverse() and complement()
         '''
-        if seq == None:
+        if seq is None:
             seq = self.DNA
         first = self.reverse(seq)
         second = self.complement(first)
@@ -79,9 +82,9 @@ class Sequence:               # Use a class called Sequence
         '''
         Count the percentage of GC in the sequence
         '''
-        GC = self.DNA.count('G') + self.DNA.count('C')
+        gc_nucleotides = self.DNA.count('G') + self.DNA.count('C')
         total_seq = self.length()
-        return total_seq/GC 
+        return total_seq/gc_nucleotides 
 
 
 
