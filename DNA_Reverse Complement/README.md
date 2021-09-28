@@ -11,7 +11,6 @@ Some code developed with my supervisor for learning proposes
 4. Reverse and complement
 5. GC percentage
 6. Load data from .txt file
-
 ```
 .
 ├── README.md
